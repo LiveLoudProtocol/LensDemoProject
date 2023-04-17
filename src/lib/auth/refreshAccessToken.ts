@@ -19,9 +19,11 @@ import {
       const res = await fetch("https://api.lens.dev/", {
         method: "POST",
         headers: {
+          
           "Content-Type": "application/json",
           //normally, request a new refresh token (which causes the infinite loop) 
           ...options,
+          
           "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
